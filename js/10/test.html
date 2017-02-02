@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<div id="ddd" style="position: absolute;width: 100px;height: 100px;background-color: red;"></div>
+</body>
+<script>
+    var start = 0;
+    var end = 1000;
+    var step =50;
+    var status = true;
+    var position = 0;
+   function move(){
+       console.log("move:"+status)
+       if(status == true ){
+           position = position+step;
+           if(position<=end){
+               document.getElementById("ddd").style.left=position+"px";
+           }else {
+               document.getElementById("ddd").style.left=end+"px";
+               status=false;
+           }
+       }else {
+           position = position - step;
+           if(position>start){
+               document.getElementById("ddd").style.left=position+"px";
+           }else {
+               document.getElementById("ddd").style.left=start+"px";
+               status=true;
+           }
+       }
+   }
+    setInterval(move,100);
+</script>
+</html>

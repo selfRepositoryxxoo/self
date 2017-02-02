@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="oTab">
+    <ul>
+        <li class="active">新闻</li>
+        <li>图片</li>
+        <li>军事</li>
+    </ul>
+    <div class="active">新闻内容</div>
+    <div>图片内容</div>
+    <div>军事内容</div>
+</div>
+<script src="js/index1.js"></script>
+
+
+<script>
+    /*
+    * 分析思路:
+    * 1)三个导航和三个内容区一一对应
+    * 2)所有的都变成默认样式，只让当前鼠标经过的变成经过的样式，对应的div显示
+    *
+    * */
+    //document.getElementsByTagName("ul")[0];
+    //getElementsByTagName拿到的是一组标签，就算是一个我们也得取一下,取其中的一个 [0] .item()这两个方法
+    //item只能取我们的html元素
+    /*console.log(document.getElementsByTagName("ul")[0]);
+    console.log(document.getElementsByTagName("ul").item(0));*/
+
+
+
+    /*
+    * 具体步骤
+    * 1.拿到我们要操作的元素
+    * 2.功能点，让所有的li/div都没有样式激活的添加active
+    *   *让所有的都没有当前的有
+    * 3.循环绑定事件 给要操作的元素增加事件   元素.onmouseover
+    * 4.给对应的操作元素添加我们的active样式
+    * */
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    //在字符串中表示双引号或者单引号
+    var str="aaa'bbb";
+    var str1='aaa"bbb';
+    //var str2='aa'b';
+    //假如非要双引号非要弄出来   // 转义字符（用来表示转义）// \"-->"    \'-->'  \\-->\; \r(回车)\n(换行);\t(制表符);  假如在""里面用"只能加\"菜可以;
+    var str4='a\'b';//这是ok；
+    var str5="a\"b";
+    console.log(str4);
+    var str7="aaa"+"111";//aaa111;
+    var str8="aaa"+111;//aaa111;拼接的时候会自动的将其他的数据类型装换成数字符串;
+    // boolean :true  false
+    //!:一个叹号 是取反 两层含义： 首先将值转化为 boolean  然后取反
+    //!!:  两个叹号的作用是讲其他的数据类型  转换为  boolean
+    // Boolean()
+   // console.log(Boolean("zhufen"));
+   //console.log(!!"zhufeng")
+    //console.log(!3);//先把3转换为boolean，然后在取反
+    //  只有一个值得时候      只有  0  NaN   "" null undefined 这五个事假的
+//    其余的都是真的
+    //2 如果两个值是否相等
+    //如果  val1==val2 两个值可能不是同一个数据类型的  如果都是== 比较的话，会
+//    进行默认的数据类型转换//
+    //对象和对象比较永远不想等
+    //对象 ==字符串  先将对象转化为字符串，（调用的toString的方法）
+    //空数组[]转化为字符串""
+//    然后在进行比较  []定于""
+//    {}转化为字符串"[object object]"{}是一个空对象的的写法  空对象不等于""
+//  对象==布尔类型  先转化为字符串（toString）  然后在转化为数字（number） 布尔类型也转化为
+//    number（true代表是的是1 ,false代表的是0）最后让两个数字比较
+    //字符串必""
+//null  ==undefined 这个是相等的  //记住一条就是 null和undefined  与其他任何对象比较是不想等的
+    //只有null==undefined是成立的
+    //  除了==是比较  ===也是比较（这是绝对比较）但是数据类型不一样绝对不想等  null undefined也不行
+
+
+    //var obj={name:"zhufeng",gendser:true,age:18,age:"18sui"};//字面量创建方式  对于属性名来说  属性名可以写""  也可以不写但是字符串就得写""值需要写;因为字符串必须要有"";
+    var obj=new object();  // 实例创建的方式
+    obj.name="zhufeng";//增加属性;
+    obj["name"]="zhufeng";//""是一定要写的[""]一定要写不加就会成为一个变量
+    console.log(obj[aa]);//表示是变量，如果变量不存在，就会报错，
+    //查找
+    //修改名字   规定一个对象中的属性名不能重复，如果之前有就是修改，没有就是增加
+    obj["name"]="zhufengpeixin";
+    obj.name="zhufengpeixun";
+    obj.name=""
+    obj["name"]=""
+    //获取属性名和属性值  如果属性名不存在  默认返回的结果是undefined；重点
+    console.log(obj.name);
+    console.log(obj["name"]);
+    //删除属性名和属性值
+    //obj.name=null;//假删除
+    delete obj.name;///真删除
+    console.log(obj);
+    判断这个属性名是否在这个obj中 通过in
+    //对象数据类型包含以下  Object Array RegExp Data String Boolean Math
+    var reg=/^$/
+    // js中对象、类、实例的区别：对象是泛指，js中万物皆对象，类是对对象具体的细分，实例是类中一个具体的食物
+    // 自然界中万物皆对象  类所有的东西可以分为人类，植物类，动物类，物体类，
+//三种判断语句  if else 三元运算符  switch case
+
+    var num=12;
+    if(num>=0){
+        console.log("正数或零");
+    }else{
+        console.log("负数");
+    }
+//条件？成立执行的代码：void 0；
+    num>=0?console.log("正数或者零"):console.log("负数");
+    if(num>=0){
+        console.log("正数或者零");
+    }
+    //可以转换 用三元府
+     num>=0?console.log("正数或者零"):void 0;
+   // 每一种case都要加break  不加break  后面的代码都会执行 每种case相当于是=== 需要注意数据类型是否一致
+    var num=10;
+     if(num==0){
+         console.log("0");
+     }else if(num==5){
+         console.log("5");
+     }else if(num==10){
+         console.log("10");
+     }else{
+         console.log("NaN");
+     }
+    //可以变换  使用switch  case：  break;
+    var num=10;
+    switch(num){
+        case 0:
+            console.log("0");
+            break;//没有break忽视case5  这个语句
+        case 5:
+            console.log("5");
+            break;
+        case 10:
+            console.log("10");
+            break;
+        default:
+            console.log("NaN")
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //
+</script>
+</body>
+</html>

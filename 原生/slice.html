@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en"><meta charset="UTF-8"><title></title></head><body></body>
+</html>
+<script>
+    Array.prototype.mySlice=function(){
+//不能使用return this  尽管执行这个可以将ary的堆地址给newAry，但是他们还是一个相同，和我们slice的功能不符合
+            var ary=[];
+            for(var i=0;i<this.length;i++){
+                ary[ary.length]=this[i]
+            }
+            return ary;
+    };
+    var ary=[12,12,34,56];
+    var newAry=ary.mySlice();
+    console.log(newAry);
+</script>
+

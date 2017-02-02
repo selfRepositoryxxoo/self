@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+</body>
+</html>
+<script>
+//    parentNode  一直往上找  被应该是存在的但是找到body后body.parentNode=null;
+//    在函数体中形参和变量是重名的，也得需要预解释。
+  var num=13;
+    function fn(num){//假如这个（a）是变量，
+        console.log(num);//形参和变量重名的时候，优先输出形参，有值得。
+        var num=12;
+        console.log(num);
+    }
+    fn(num);//这个num是实参，
+var num=13;
+function fn(){
+    console.log(num);//把全局作用域下面的num的值获得是13
+    num=12;//把全局作用域下面的13改成12；
+    console.log(num);
+}
+fn();
+
+
+
+
+
+</script>

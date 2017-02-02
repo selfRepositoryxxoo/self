@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            background: red;
+           * border: 1px solid red;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body id="oBody" style="background-color:white;margin: auto" >
+<script>
+
+    var oBody = document.getElementById("oBody");
+    oBody.onclick = function () {
+        var bg = this.style.backgroundColor;
+        bg==="white"?this.style.backgroundColor="black":this.style.backgroundColor="white"
+    };
+
+
+
+    /*
+    * 点击我们的body 从白色切换成黑色 无限循环
+    * 1.我们要先获得body（想操作谁就要先获取谁）
+    *   document.getElementById("我们要获取的id名字")
+    * 2.点击我们的元素
+    * 元素.onclick = function(){
+    *   //这里装的就是我们要执行的内容
+    * }   onclick ="alert()"
+    * 3.获取当前元素的颜色
+    *
+    *  元素.style.backgroundColor  marginTop:
+    *   border-radius   .style.borderRadius
+    * 4.如果是白的 我们就让他变成黑色
+    *
+    *
+    * */
+    /*var oBody = document.getElementById('oBody');
+    oBody.onclick= function () {
+        //这里装的就是我们要执行的内容
+        //字符串可以用我们的单引号和双引号
+        //谁点击的当前this就是谁
+        var bg = this.style.backgroundColor;
+        //console.log(bg);
+        if(bg==="white"){
+            this.style.backgroundColor='black';
+        }else{
+            this.style.backgroundColor='white';
+        }
+        //三元表达式写法
+
+        //bg==="white"?oBody.style.backgroundColor='black':oBody.style.backgroundColor='white';
+            switch (bg){
+                case 'white':
+                    this.style.backgroundColor='blue';
+                    break;
+                case 'blue':
+                    this.style.backgroundColor='red';
+                    break;
+                case 'red': //else if
+                    this.style.backgroundColor='green';
+                    break;
+                default://else
+                    this.style.backgroundColor='white';
+            }
+
+    }*/
+    //console.log(typeof oBody);//对象型
+    /*
+    document 文档对象
+    get 获得
+    Element 一个元素
+    By 通过
+    Id id名字
+    */
+
+
+</script>
+</body>
+</html>

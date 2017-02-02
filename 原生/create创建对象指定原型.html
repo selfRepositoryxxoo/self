@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body></body>
+</html>
+<script>
+    var obj={name:'yangchongduo'};
+    //通过构造函数创建一个类Fn首字母大写
+    function object(o){
+        function Fn(){
+        }
+        Fn.prototype=o;
+        return new  Fn//返回实例
+    }
+    var newObj=object(obj)
+
+</script>
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+        }
+        ul,li{
+            list-style: none;
+        }
+        li{
+            float: left;
+            margin-left:30px ;
+            width:450px ;
+            height:200px;
+        }
+        li input{
+            float: left;
+            display:block ;
+            width: 150px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            background: darkgray;
+            /*border: 1px solid chartreuse;*/
+        }
+        li input.on{
+            background: salmon;
+        }
+        li div{
+            clear: both;
+            display: none;
+            width:100% ;
+            height: 100%;
+            background:darkorange ;
+        }
+        li div.on{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <input type="button" value="按钮" class="on"/>
+        <input type="button" value="按钮" />
+        <input type="button" value="按钮" />
+        <div class="on">1111111111</div>
+        <div >22222222222</div>
+        <div >333333333333</div>
+    </li>
+    <li>
+        <input type="button" value="按钮" class="on"/>
+        <input type="button" value="按钮" />
+        <input type="button" value="按钮" />
+        <div class="on">1111111111</div>
+        <div >22222222222</div>
+        <div >333333333333</div></li>
+    <li>
+        <input type="button" value="按钮" class="on"/>
+        <input type="button" value="按钮" />
+        <input type="button" value="按钮" />
+        <div class="on">1111111111</div>
+        <div >22222222222</div>
+        <div >333333333333</div></li>
+    <li>
+        <input type="button" value="按钮" class="on"/>
+        <input type="button" value="按钮" />
+        <input type="button" value="按钮" />
+        <div class="on">1111111111</div>
+        <div >22222222222</div>
+        <div >333333333333</div>
+    </li>
+</ul>
+</body>
+</html>
+<script>
+    var oLis=document.getElementsByTagName("li");
+    for(var i=0;i<oLis.length;i++){
+        tabChange(oLis[i])
+    }
+
+    function tabChange(oLi){
+        var oInput=oLi.getElementsByTagName("input");
+        var oDiv=oLi.getElementsByTagName("div");
+
+        function tabInner(innerIndex){
+            for(var j=0;j<oInput.length;j++){
+                oInput[j].className="";
+                oDiv[j].className="";
+            }
+           oInput[innerIndex].className="on";//这边只能是oInput[innerIndex],this是不可以的
+            oDiv[innerIndex].className="on";
+        }
+        //这个是执行的那一步
+        for(var i=0;i<oInput.length;i++){
+            (function(index){
+                oInput[index].onclick=function(){
+                    tabInner(index)
+                }
+            })(i)
+        }
+    }
+
+
+
+
+</script>
+
+
+

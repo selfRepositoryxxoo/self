@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function sum(){
+        var total=0;
+        for(var i=0;i<arguments.length;i++){
+            var cur=Number(arguments[i]);//number 目的是为了"30"这样的字符串能够相加，不用这个的话就会  "30"这样的字符成为 字符串拼接了;
+            if(isNaN(cur)){
+                continue
+            }
+            total+=cur;
+        }
+        return total
+    }
+    var res=sum(12,98);
+    console.log(ary)
+
+
+
+</script>

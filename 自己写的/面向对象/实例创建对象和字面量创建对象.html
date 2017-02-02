@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body></body>
+</html>
+<script>
+//    var person=new Object();
+//    person.name="yang";
+//    person.age=12;
+//    person.job="engineer";
+//    person.sayName=function(){
+//        alert.(this.name)
+//    }//有问题
+    var person={name:"yang",
+        age:12,
+        job:"engineer",
+    sayName:function (){
+        alert(this.name)
+    }};
+    alert(person.name);
+</script>
+属性是两种属性  数据属性有4个描述其行为的特性假如想修改这个四个属性就的使用Object.defineproperty
+()这个方法     访问器属性也有四个描述其行为的特性也不能直接定义需要使用Object.defineproperty
+()进行定义 访问器的访问属性和修改属性分别调用函数get和set
+同时定义多个属性 object.defineproperties(){}
+读取属性的特性   object.getOwnPropertyDescriptor(){}
+
+
+创建对象 工厂模式 返回的是一个对象是处理了  相似属性的对象的难题但是没有解决对象是什么数据类型的问题
+构造函数模式  通过构造函数来创建对象（实例）  必须使用new这个操作符 构造函数首字母大写;

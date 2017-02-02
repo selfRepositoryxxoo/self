@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css.css" type="text/css"/>
+    <script src="jquery-2.2.3.min.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+            getAllElements(document.getElementsByTagName("html")[0]);
+        //得到第一个html
+        for(var i=0;i<elementOjobs.length;i++){
+            if(elementOjobs[i].getAttribute("class")=="sel"){
+                elementOjobs[i].setAttribute("class","inf")
+            }
+        }
+        };
+//        $(function(){
+//            $("span").attr("class","inf");
+//        });
+//        $(function(){
+//            $(".sel").attr("class","inf")
+//        });
+var elementOjobs =new Array();
+var foot=0;
+       function getAllElements(element) {
+           if(element.hasChildNodes()){
+               var elementsList=element.childNodes;
+               for(var i=0;i<elementsList.length;i++){
+                   var nameType=elementsList[i].nodeType;
+                   if(nameType==1){
+//                       alert(elementsList[i].nodeName);
+                       getAllElements(elementsList[i]);
+                   }
+               }
+               elementOjobs[foot++]=element;
+           }
+       }
+        $("父亲+孩子").attr("class","inf");只是和父亲一样的节点的第一个
+        $("父亲~孩子").attr("class","inf");这个是和父亲一样的所有的子节点 是一个集合
+        $(function(){
+            $(".sel").find(".sec").attr("class","ifo");
+            $(".sel>.sec").attr("class","ifo");
+            $(".sel").children(".sec").attr("class","ifo");
+        })
+    </script>
+</head>
+<body>
+
+    <div class="sel">www.baidu.com</div>
+    <div>
+        <span>www.baidu.com</span>
+    </div>
+    <span  class="sel">www.baidu.com</span>
+    <input type="text" value="tisnhideshi" class="sel"/>
+</body>
+</html>

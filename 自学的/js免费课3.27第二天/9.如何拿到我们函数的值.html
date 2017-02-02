@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 函数执行后的结果如何获取
+    *
+    *
+    *
+    * */
+
+    function sum(a,b){//预定好的入口
+        var total = "";
+        total=a+b;
+        //我们想把值拿出来，但是拿不到，由于我们作用域是私有的，闭包机制导致的
+        //return total;// 通过return 把我们的结果拿出来 return 2;而不是把total这个变量名返回; 如果没有return 执行后返回undefined
+        console.log(11111111);//函数反回了值以后这个return后面的就不执行了
+    }
+    //total
+    var total = sum(1,1);//这个total是在全局下定义的和函数里面的关系
+    console.log(sum(1,1));
+
+    var i = 8;
+    function a(){
+        alert(i)
+    }
+    a();
+
+</script>
+</body>
+</html>

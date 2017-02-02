@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    //object  {}  []  /^$/  时间  每一个对象是 属性值和属性名 组成的
+    var ary = [12, 34, 45, 34];
+    //console.dir(ary);
+    //数组也会对象  object 我们看到的是属性值  属性名是   0-3
+    //length 数组的长度
+    //ary[0] ; ary[1] //对象名
+    //   ary.length;
+    // ary["length"]
+    //循环输出这个数组
+    for (var i = 0; i < ary.length; i++) {
+        console.log(ary[i]);
+    }
+    //for  in 是便利每个属性值 和属性名的  键值对
+    for (var key in ary) {
+        //for in 循环是用来遍历一个对象的中的属性名和属性值得，但是对于当前对象不可美剧的属性我们是没有遍历到  例如   ary.length 这个属性
+        console.log(ary[key]);//没有指定开始和结尾
+    }
+
+
+</script>
+</body>
+</html>

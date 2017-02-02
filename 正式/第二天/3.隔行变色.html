@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body,ul,li{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #list{
+            width: 500px;
+            margin: 50px auto;
+        }
+        #list li{
+            height: 30px;
+            border-bottom: 1px solid red;
+            line-height: 30px;
+        }
+        .c1{
+            background: red;
+        }
+        .c2{
+            background: yellow;
+        }
+        .c3{
+            background: white;
+        }
+    </style>
+</head>
+<body>
+<ul id="list">
+    <li>1111</li>
+    <li>2222</li>
+    <li>3333</li>
+    <li>4444</li>
+</ul>
+</body>
+</html>
+<script>
+var oUl=document.getElementById("list");
+var oLis=oUl.getElementsByTagName("li");
+//获取所有的编号 （索引）
+    for(var i=0;i<oLis.length;i++){
+        var oLi=oLis[i];
+        i%2===0?(oLi.className="c1",oLi.zhu="c1"):(oLi.className="c2",oLi.zhu="c2");
+        oLi.onmouseover=function(){
+            this.className="c3";
+        }
+        oLi.onmouseout=function(){
+            var oldVal=this.zhu;
+            this.className=oldVal;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//i++和++i都表示自身累计1 当赋值的时候有区别；
+//    var a=5;
+//    var c=a++;//先赋值在自身累加;
+//    console.dir(a);
+//    console.dir(c);
+//var b=5;
+//var d=++b;//先自身累加在赋值;
+//console.dir(a);
+//console.dir(c);
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+

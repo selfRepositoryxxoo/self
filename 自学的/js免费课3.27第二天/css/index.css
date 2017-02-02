@@ -1,0 +1,11 @@
+*{margin: 0;padding: 0;}
+#oTab{width: 500px;height: 350px; position: absolute;left: 50%;top: 50%;margin:-175px 0 0 -250px;border: 1px solid red}
+ul li{list-style: none;display: inline-block; width: 60px;text-align:center;height: 30px;line-height: 30px; border: 1px solid greenyellow; -webkit-user-select: none;cursor: pointer}
+ul li.active{background: yellowgreen; color: brown}
+#oTab div{border: 1px solid #dddddd;width: 400px;height: 150px;margin-top: -1px; position: relative;z-index: 1; display: none}
+#oTab div.active{display: block}
+
+
+
+
+

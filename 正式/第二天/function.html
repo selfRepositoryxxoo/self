@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    //方法运行的时候在栈 运行的时候就会重新开辟一个封闭的内存空间；  每运行一次就会开辟一次新的空间
+    var oLis=document.getElementsByTagName("li");
+    for(var i=0;i<oLis.length;i++){
+        var oLi=oLis[i];
+        i%2==0?(oLi.className="c1",oLi.yy ="c1"):(oLi.className="c2",oLi.yy="c2");
+        oLi.onmouseover=function(){
+            this.className="c3";
+        }
+        oLi.onmouseout=function(){
+            var oldVal=oLi.yy;
+            this.className=oldVal;
+        }
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * for forIn while
+    *for重复的干一件事
+    * */
+    //声明        条件  每次执行完后+1
+    //先判断条件 条件如果成立 就执行我们的循环体 让自身+1 再进行判断
+    //debugger;//调试 在浏览器直接点 F10可以继续执行我们的代码
+   /* for(var i =0;i<100;i++){
+        console.log(i);
+    }*/
+
+    //break continue
+    //如果循环里遇到break或者continue 之后代码就不再执行了
+
+
+    for(var i = 0; i < 5;i++){
+        //continue;
+        console.log(i);
+    }
+    //循环外输出  多加了一次
+    console.log(i);
+
+    //break和continue的区别
+    //break跳出本次循环 循环不再执行并且不累加
+    //continue 跳出当前循环 之后执行我们累加的条件 （只是跳出本次循环）还是会继续执行
+
+
+    for(var i = 0; i<5;i++){
+        console.log("break",i);//执行一次不再执行了
+        break;
+        console.log("break之后的");
+    }
+
+    for(var i = 0; i<5;i++){
+        console.log("continue",i);//虽然continue下的不执行了但是忍痛继续执行
+        continue;
+        console.log("continue之后的");
+    }
+    console.log(i);
+
+    for(var i = 0; i<10;i++){
+        if(i<=6){
+            i+=2;
+            continue;
+        }
+        i+=3;
+        break;
+    }
+    console.log();
+
+
+
+
+
+
+</script>
+</body>
+</html>

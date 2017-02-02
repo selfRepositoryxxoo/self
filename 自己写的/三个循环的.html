@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    //1.设置初始值 2 设置循环条件 3、执行循环体的内容{}  4.每次执行完后都要执行我们的i++
+    for(var i=0;i<5;i++){
+        console.log(i)
+    }
+    //在 只要出现  break 和continue 循环体后面的代码就不执行了
+    //break :再循环体中 出现break，就跳出，整个循环就结束了，i++最后的累加不在执行了
+    // continue:  出现continue  在当前这一轮的循环就结束了，后面的累加操作继续执行
+    // *** for  in  循环  用来循环一个对象中的属性名和属性值
+      var obj={
+        name:"yangchongduo",
+                age:"12",
+          height:"120",
+          1:10086,
+    }
+    obj.name
+    obj["name"]
+    obj[1]
+    //对象中有多少组键值对，我们就循环几次  有个顺序问题 有个循环数字的的属性名（按照从小到大，把剩下的属性名按照我们写的顺序下来）
+    for( var key in obj){
+        console.log(key);  //每一次循环获取的属性名
+        console.log(obj[key]);//获取属性值  for  in 中只能通过  对象名[key]来获取  不能写obj.key
+    }
+
+
+</script>
+</body>
+</html>

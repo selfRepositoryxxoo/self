@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 1.我们想解决，没有法预料的事情
+    * 当我们在定义函数的时候，不知道要用什么原材料
+    * 通过形参将我们想加入的原料放入我们的函数中
+    *   1)我们可以先预留位置 通过（）定义变量表示我们要投入原料
+    *   2)我们执行的时候要传入我们原料,如果不传递那就是undefined
+    * */
+    function sum(a,b){
+        var total = 0;
+        total=a+b; //无法算出来的数就是NaN
+        console.log(total);
+    }
+    sum(1);
+    sum(2,2);
+
+    total = total*3
+
+    //var a ; 当我们没赋予值得时候 默认的话就是undefined
+    //console.log(a);
+    //console.log(1+"1");
+</script>
+</body>
+</html>

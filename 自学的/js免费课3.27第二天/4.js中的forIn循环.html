@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * js for in循环 重点遍历我们对象的
+    * for循环根据我们有多少对属性值属性，去循环多少次
+    * 使用 for(key(相当于)属性名 in 对象)；
+    *
+    *
+    * */
+    //循环的顺序 先循环我们的数字（从小到大），在把剩下的依次遍历我们的属性得到属性值
+    var person={
+        name:'杨南南',
+        age:16,
+        height:'170cm',
+        1:'play',
+        0:'eat',
+    };
+    var i = 0;
+    for(var key in person){
+        //i++相当于后加 先运算在加
+        //++i相运算在输出
+        //console.log(i++);  //i+=2    i = i+2
+        console.log(++i);
+        var val = person[key];//在for in循环中只能用[]来取属性值
+     //   console.log(val);
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

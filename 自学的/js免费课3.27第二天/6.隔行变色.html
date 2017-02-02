@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隔行变色</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 500px;
+            margin: 0 auto;
+            border:5px dashed yellow;
+            border-radius:20px;
+            box-shadow: 1px 1px 3px 1px #ddd;
+        }
+        ul li{
+            list-style: none;
+            height: 30px;
+            line-height: 30px;
+            overflow: hidden;       /*让多余文字编程省略号*/
+            text-overflow: ellipsis;
+            white-space:  nowrap;
+        }
+        /*奇偶选择器 css3的*/
+        /*ul li:nth-child(odd){*/
+            /*background: deeppink;*/
+        /*}*/
+        /*ul li:nth-child(even){*/
+            /*background: mediumpurple;*/
+        /*}*/
+        /*ul li:hover{*/
+            /*background: greenyellow;*/
+        /*}*/
+        .c1{
+            background: deeppink;
+        }
+        .c2{
+            background: mediumpurple;
+        }
+        .c3{
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body id="oBody">
+    <ul id="oUl" style="" class="">
+        <li>访捷克三大理由 李克强批示国企提质增效会议 考察海南 中国经济发展密码</li>
+        <li>脱离冷链运输储存违法 中国疫苗质量标准可比肩国际 疫苗上市仍要随机抽验</li>
+        <li>中科院院士:不能因个别事件怀疑国产疫苗 过期疫苗几乎不会引起毒性反应</li>
+        <li>去年2月退休 前年12月最后1次公开露面 去年集团原副总经理涉受贿罪被诉</li>
+        <li>温家宝全程参与新书编辑 细到书籍用纸颜色(图)</li>
+        <li>山东临沂市平邑县发生3.1级地震 震源深度0千米</li>
+        <li>比利时恐袭核心人物浮出水面 为28岁叙利亚男子</li>
+        <li>上海"百名红通人员"张丽萍被劝返回国自首</li>
+    </ul>
+
+<script>
+    var oUl = document.getElementById("oUl");
+
+    var oLis = oUl.getElementsByTagName("li");
+    for(var i = 0; i<oLis.length;i++){
+        var oli = oLis[i];
+        if(!(i%2)){
+            oli.className = "c1";
+            oli["zhuFeng"]="c1"
+        }else{
+            oli.className = "c2";
+            oli["zhuFeng"]= "c2";
+        }
+        oli.onmouseover = function () {
+            this.className="c3";
+        };
+        oli.onmouseout = function () {
+            this.className=this["zhuFeng"];
+        }
+    }
+
+
+    /*
+    * 隔行变色
+    * 1.将我们的列变隔一行变一个色
+    * 2.鼠标滑过的时候，颜色改变，当鼠标滑出时我们的颜色在改变回去
+    * id是唯一的 通过document.ElementById("")多个id相同的时候拿的是第几个？
+    * */
+    /*
+    * 1.我们要先拿到ul/document
+    * 2.通过ul找到ul下的所有li
+    *   "context(上下文)".getElementsByTagName("标签名字");
+    *   1）id前面只能跟document 2）如果在当前页面下拿id可以不通过document.getElementById
+    *
+    *   getElementsByTagName:拿到一组li
+    * 3.onmouseover onmouseout   元素.onmouseover/元素.onmouseout
+    * */
+
+   /* var  oUl = document.getElementById("oUl");
+
+    var oLis = oUl.getElementsByTagName("li");//通过标签获取我们的li(类数组)
+    //限定上下文
+    //console.log(oLis);
+    for(var i=0;i<oLis.length;i++){
+        var li = oLis[i];//i/2   i%2
+        li.className='c'+(i%2+1);
+        li.zhuFeng=(i%2+1);
+        //0-8   （0 0 c1）（1 1 c2）（2 0 c1）
+        if(i%2==0){
+            li.className='c1';
+        }else{
+            li.className='c2';
+        }
+        //i%2==0?li.className='c1':li.className='c2';
+        //设置li的className值 就是我们class的名字
+       // li.className
+        li.onmouseover= function () {
+            this.className="c3";
+        };
+        li.onmouseout= function () {
+            //console.log(i);//这个地方一直8 为什么？
+            var oldVal = this.zhuFeng; //通过在对象上自定义属性的方式记住他的顺序
+           // console.log(this.zhuFeng);
+            this.className='c'+oldVal;
+        };
+    }*/
+
+    //oBody.className='c1';
+//    console.log(oLis[0]);
+//    console.log(oLis[1]);
+//    console.log(oLis[2]);
+
+
+
+
+</script>
+</body>
+</html>

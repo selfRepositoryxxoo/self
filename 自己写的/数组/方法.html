@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+    //var res=ary.push(24,"zhufeng","yangchongduo");
+    //res=ary.pop();
+   // res=ary.length--
+   // console.log(ary,res);//在数组加值
+    // console.log(ary);
+    //方法的作用   需要传哪些参数    是否有返回值  返回值是什么      通过此方法是否对原来的数组产生变化
+    //1.关于述数组的增加修改和删除的方法
+    // ary.push() 向数组的末尾增加新的内容
+    //ary.push(12,"zhufeng","yangchongduo");
+    //>假如不想通过ary.push()   ary[ary.length]=10;原生的添加的方法
+    //pop   删除数组最后一项的内容  不用pop    ary.length--,ary.length-=1,ary.length=ary.length-1
+    // var res=ary.pop();//返回值是被删除的那一样
+    // console.log(res,ary);
+    //ary.shift 删除数组的第一项
+     //var res=ary.shift(); //被删除的那一向
+   //console.log(res,ary);
+    // //ary.unshift   向数组第一项增加一项
+    /// var res=ary.unshift(值);
+    // console.log(res,ary);
+    //splice 既能实现删除 也能实现增加
+    // var ary=[12,23,234];
+
+    //ary[1]=256;//利用对象的操作的方式修改某一项的值
+    //var res=ary.splice(ary.length,0,5);
+    //console.log(ary,res);
+    //ary.splice( n,m);从索引n开始，删除m个元素，把删除的内容以新数组的方式返回，
+    //原来的数组改变 ary.splice(2);从索引2开始 删除一直到最后
+    /////   var res=ary.splice(1,3);//res 是返回值
+    // console.log(res,ary);
+    // var res=vary.splice();
+    //slice:实现数组的截取，在原来的某一部分  slice（n，m） 从索引n开始找到索引m处 不包含m将找到的部分已一个新数组返回  ，原来的数组不变
+    //slice(n)从n开始一直到末尾 ，slice(0) slice/()把原来的数组克隆一份一模一样的数组返回
+    //var res=ary.slice();
+    //  console.log(res)
+//slice中的特殊情况  n或者m为负数  n>m，  n或者m已经超出了数组的范围，相等也是空数组
+    //var ary=[12,23,34,45,56];
+    //var newAry=ary.slice(-4 ,4);//n为负只是顺序方向发生变化了两者在物理上需要有交集
+    //var newAry=ary.slice(1,-4);//假如m为负的话 是从后面开始选择
+    //var newAry=ary.slice(4,2);//只要n>m返回值就是空数组当然我的意思是都是正数 的时候
+    //var newAry=ary.slice(7,12);//大于我们的ary.length是不可以的
+    //console.log(newAry);
+    //concat将两个数组弄成以一块    ary1.concat（ary2）;
+    //ary1.concat();//把ary1克隆一份
+    //var ary=[12,23,34,23,45,67,89];
+   // var res=ary.join("+");//用分隔符连接起来
+    //var res=ary.toString();
+   // console.log(eval("12+13"));
+   // 求和；
+   // var ary=[12,15,24];
+   // console.log(ary.join("+"));//这里只能加字符串  控制台显示是"12+15+24";但是后面不显示"" 影藏了
+    //eval()指定是一个方法
+    //console.log(eval(ary.join("+")));//把字符串转换成js语句  不是数组的方法
+   // ary.sort(function(a,b){//回调函数
+        //a表示数组的前一项  b是后一项
+        //return a-b;//从小到大
+        //return b-a;//从大到小
+   // });
+    //console.log(ary);//直接输出就可以了
+    //原有数组都不发生改变
+   // slice(n,m);//可以是负数
+   // indexof();//从前往后找找不到返回  -1  找到返回索引   和str.CharAt()通过索引找值
+   // lastIndexof();//总后往前找
+    //var ary=[1,2,4,56];;
+    //console.log(ary.toString())//1,2,4,56 将数组转化为字符串
+    var ary=[12,23,45,67,43];
+    var res=ary.lastIndexOf(888);
+    console.log(res) ; //res==-1;
+   // true=="aa"  false=="0"  true=="123"
+
+</script>
+</body>
+</html>

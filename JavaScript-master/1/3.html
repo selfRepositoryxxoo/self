@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/reset.min.css"/>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        html {
+            font-size: 100px;
+        }
+
+        .box {
+            position: relative;
+            margin: 0 .2rem;
+            height: 2.68rem;
+            font-size: .36rem;
+            text-align: center;
+            line-height: 2.68rem;
+            background: green;
+        }
+
+        .inner {
+            width: 1rem;
+            height: .7rem;
+            background: red;
+            position: absolute;
+            top: .99rem;
+            right: 0;
+        }
+    </style>
+    <script>
+        ~function () {
+            var desw = 750,
+                    winW = document.documentElement.clientWidth;
+            document.documentElement.style.fontSize = winW / desw * 100 + "px";
+        }()
+
+    </script>
+</head>
+<body>
+<div class="box">
+    天使的翅膀
+    <div class="inner"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #tab{
+            width: 100px;
+            height: 100px;
+            background: #cccccc;
+        }
+    </style>
+</head>
+<body onload="change()">
+<div id="tab" onmouseover="onOver(this)" onmouseout="onOut(this)"></div>
+
+<script>
+    function onOver(ooj){
+       ooj.innerHTML="hello";
+    }
+    function onOut(ooj){
+        ooj.innerHTML="world";}
+
+</script>
+
+
+<form action="" method="" >
+    <input type="text"  onselect="texChange(this)" onfocus="texChange1(this)"/>
+</form>
+<script>
+    function texChange(bg){
+        bg.style.background="red";
+    }
+    function texChange1(bg){
+        bg.style.background="blue";
+    }
+    function change(){
+        alert("wannyejiazaiwanghceng ")
+    }
+
+
+</script>
+</body>
+</html>
